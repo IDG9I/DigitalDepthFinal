@@ -8,196 +8,244 @@
     android:background="@drawable/informacions">
 
     <TextView
-        android:textColor="#BABDEB"
         android:id="@+id/textView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="18dp"
         android:text="LED Multi Touch de 6.3 Full HD"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="458dp" />
+        android:textColor="#BABDEB"
+        app:layout_constraintBottom_toTopOf="@+id/textView26"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:textColor="#949BF3"
         android:id="@+id/textView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginBottom="19dp"
         android:text="Bateria:"
+        android:textColor="#949BF3"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="458dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView27"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:textColor="#BABDEB"
         android:id="@+id/textView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="217dp"
         android:text="LTE Wi-Fi ac Bluetooth 5.2 Minijack Infrarrojos"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="495dp" />
+        android:textColor="#BABDEB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView27" />
 
     <TextView
-        android:textColor="#949BF3"
         android:id="@+id/textView27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="216dp"
         android:text="Conectividad:"
+        android:textColor="#949BF3"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="495dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:textColor="#BABDEB"
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="28dp"
         android:text="Adreno 610"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="274dp" />
+        android:textColor="#BABDEB"
+        app:layout_constraintBottom_toTopOf="@+id/textView18"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:textColor="#949BF3"
         android:id="@+id/textView23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginBottom="35dp"
         android:text="GPU:"
+        android:textColor="#949BF3"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="267dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView17"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:textColor="#BABDEB"
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="18dp"
         android:text="LED Multi Touch de 6.3 Full HD"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="421dp" />
+        android:textColor="#BABDEB"
+        app:layout_constraintBottom_toTopOf="@+id/textView28"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:textColor="#949BF3"
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="19dp"
         android:text="Pantalla:"
+        android:textColor="#949BF3"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="421dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView29"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:textColor="#BABDEB"
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="243dp"
+        android:layout_marginBottom="27dp"
         android:text="4 GB"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="322dp" />
+        android:textColor="#BABDEB"
+        app:layout_constraintBottom_toTopOf="@+id/textView16"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:textColor="#949BF3"
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="27dp"
         android:text="Ram:"
+        android:textColor="#949BF3"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="322dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:textColor="#949BF3"
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="32dp"
         android:text="Almacenamiento"
+        android:textColor="#949BF3"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="368dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView21"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:textColor="#BABDEB"
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="33dp"
         android:text="almacenamiento eMMC 5.1"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="368dp" />
+        android:textColor="#BABDEB"
+        app:layout_constraintBottom_toTopOf="@+id/textView20"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:textColor="#949BF3"
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="25dp"
         android:text="Modelo:"
+        android:textColor="#949BF3"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="122dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="24dp"
         android:text="REDMI NOTE 8"
         android:textColor="#BABDEB"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="122dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:textColor="#949BF3"
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginBottom="43dp"
         android:text="INFORMACION"
+        android:textColor="#949BF3"
         android:textSize="30dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="39dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:textColor="#949BF3"
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginBottom="33dp"
         android:text="Marca"
+        android:textColor="#949BF3"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="166dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="33dp"
         android:text="XIAOMI"
         android:textColor="#BABDEB"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="166dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:textColor="#BABDEB"
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="36dp"
         android:text=" Snapdragon 665 (hasta 2.0GHz)"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="219dp" />
+        android:textColor="#BABDEB"
+        app:layout_constraintBottom_toTopOf="@+id/textView22"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:textColor="#949BF3"
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginBottom="29dp"
         android:text="CPU"
+        android:textColor="#949BF3"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="219dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView23"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="56dp"
         android:layout_height="57dp"
-        android:textSize="19dp"
-        android:text="X"
-        app:tint="#5D69FC"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="59dp"
         android:backgroundTint="#5D69FC"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="5dp" />
+        android:text="X"
+        android:textSize="19dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#5D69FC" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
