@@ -9,11 +9,12 @@
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="386dp"
-        android:layout_height="166dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="385dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="9dp"
         android:layout_marginEnd="9dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
 
@@ -26,20 +27,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="92dp"
                 android:backgroundTint="#5B43AF"
+                android:text="Informacion"
                 android:textColor="#FFFFFF"
-                android:textStyle="bold"
                 android:textSize="16dp"
-                android:text="Informacion"/>
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btnWifi"
                 android:layout_width="123dp"
                 android:layout_height="92dp"
-                android:backgroundTint="#5B43AF"
+                android:backgroundTint="#5B43AE"
+                android:text="WIFI"
                 android:textColor="#FFFFFF"
-                android:textStyle="bold"
                 android:textSize="16dp"
-                android:text="WIFI" />
+                android:textStyle="bold" />
 
             <TableRow
                 android:layout_width="match_parent"
@@ -50,10 +51,10 @@
                 android:layout_width="123dp"
                 android:layout_height="92dp"
                 android:backgroundTint="#5B43AF"
+                android:text="Sensor"
                 android:textColor="#FFFFFF"
-                android:textStyle="bold"
                 android:textSize="16dp"
-                android:text="Sensor" />
+                android:textStyle="bold" />
 
         </TableRow>
 
@@ -63,7 +64,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="12dp" />
 
     </TableLayout>
 

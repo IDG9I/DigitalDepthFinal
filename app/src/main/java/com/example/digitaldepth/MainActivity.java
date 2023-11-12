@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         button2 = (Button)findViewById(R.id.btnIniciarS);
 
+        //lleva al Menu Principal de botones
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
