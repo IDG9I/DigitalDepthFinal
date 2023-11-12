@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MenuS"
-    android:background="#FFFFFF">
+    android:background="@drawable/fondomenu">
 
     <TableLayout
         android:id="@+id/tableLayout"
@@ -25,14 +25,20 @@
                 android:id="@+id/btnInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="92dp"
-                android:backgroundTint="#431AFF"
-                android:text="Informacion" />
+                android:backgroundTint="#5B43AF"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="Informacion"/>
 
             <Button
                 android:id="@+id/btnWifi"
                 android:layout_width="123dp"
                 android:layout_height="92dp"
-                android:backgroundTint="#431AFF"
+                android:backgroundTint="#5B43AF"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="16dp"
                 android:text="WIFI" />
 
             <TableRow
@@ -43,7 +49,10 @@
                 android:id="@+id/btnSensor"
                 android:layout_width="123dp"
                 android:layout_height="92dp"
-                android:backgroundTint="#431AFF"
+                android:backgroundTint="#5B43AF"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="16dp"
                 android:text="Sensor" />
 
         </TableRow>
@@ -96,6 +105,7 @@
         android:layout_weight="1"
         android:fontFamily="sans-serif-black"
         android:text="DIGITAL DEPTH"
+        android:textColor="@color/white"
         android:textAlignment="center"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,6 +123,7 @@
         android:src="@drawable/icone_de_securite_violett"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:tint="#FFFFFF" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

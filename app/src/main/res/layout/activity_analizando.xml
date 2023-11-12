@@ -15,7 +15,6 @@
         android:layout_marginStart="86dp"
         android:layout_marginTop="108dp"
         android:layout_marginEnd="87dp"
-        android:Tint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
