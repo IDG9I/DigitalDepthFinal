@@ -15,6 +15,7 @@ public class Wifi extends AppCompatActivity {
     private TextView txtPing;
     private Handler handler = new Handler();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,11 +66,24 @@ public class Wifi extends AppCompatActivity {
                         }
                     });
                 }
-                handler.postDelayed(this, 500); //segundos
+                handler.postDelayed(this, 1000); //segundos
             }
         };
 
         handler.post(pingRunnable);
 
+    }
+
+    private boolean isActivityRunning = true;
+    @Override
+    protected void onPause() {
+        super.onPause();
+        isActivityRunning = false;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        isActivityRunning = true;
     }
 }
