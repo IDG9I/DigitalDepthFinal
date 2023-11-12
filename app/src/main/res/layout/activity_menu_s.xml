@@ -22,14 +22,14 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/btnInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="92dp"
                 android:backgroundTint="#431AFF"
                 android:text="Informacion" />
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/btnWifi"
                 android:layout_width="123dp"
                 android:layout_height="92dp"
                 android:backgroundTint="#431AFF"
@@ -40,7 +40,7 @@
                 android:layout_height="47dp" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/btnSensor"
                 android:layout_width="123dp"
                 android:layout_height="92dp"
                 android:backgroundTint="#431AFF"
@@ -69,12 +69,12 @@
         android:text="Salir"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btvolver2"
+        app:layout_constraintEnd_toStartOf="@+id/btnSettings"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
     <Button
-        android:id="@+id/btvolver2"
+        android:id="@+id/btnSettings"
         android:layout_width="150dp"
         android:layout_height="88dp"
         android:layout_marginTop="26dp"
