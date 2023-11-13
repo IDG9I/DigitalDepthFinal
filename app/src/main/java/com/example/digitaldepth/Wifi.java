@@ -14,6 +14,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import kotlinx.coroutines.Delay;
+
 public class Wifi extends AppCompatActivity {
 
     private TextView txtPing;

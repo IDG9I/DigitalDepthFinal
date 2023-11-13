@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MenuS extends AppCompatActivity {
 
@@ -14,6 +15,8 @@ public class MenuS extends AppCompatActivity {
     Button btnInfo;
     Button btnSensor;
     Button btnWifi;
+
+    ImageView imgAnalizar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,15 @@ public class MenuS extends AppCompatActivity {
         btnInfo = (Button)findViewById(R.id.btnInfo);
         btnSensor = (Button)findViewById(R.id.btnSensor);
         btnWifi = (Button)findViewById(R.id.btnWifi);
+        imgAnalizar = findViewById(R.id.imgAnalizar);
+
+        imgAnalizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent imgAnalizar = new Intent(MenuS.this, Analizando.class);
+                startActivity(imgAnalizar);
+            }
+        });
 
         btnWifi.setOnClickListener(new View.OnClickListener() {
             @Override
