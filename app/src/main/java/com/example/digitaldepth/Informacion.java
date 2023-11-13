@@ -88,7 +88,6 @@ public class Informacion extends AppCompatActivity {
         txtMarca.setText("Marca:   " + Marca);
         txtCPU.setText("CPU:   " + CPU);
         txtGPU.setText("GPU:   " + renderer);
-        txtGPU.setText("GPU:   " + renderer);
         txtRAM.setText("RAM:   " + totalMemoryMB + " MB / " + "Ram Disp: " + availableMemoryMB + " MB");
 
         txtAlmacenamiento.setText("Storage: Total " + TotalGB + " GB, Disponible " + DisponibleGB + " GB");
