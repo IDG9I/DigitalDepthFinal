@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.example.digitaldepth.BD.Utility;
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
     Button button2;
     Button btnRegistrar;
+
+    Switch swMostrar;
 
     private EditText Usuario;
     private EditText Contraseña;
@@ -38,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         Usuario = findViewById(R.id.txtUsuario);
         Contraseña = findViewById(R.id.txtContraseña);
 
+        swMostrar = findViewById(R.id.swMostrar);
+
 
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +60,19 @@ public class MainActivity extends AppCompatActivity {
                 consultar();
             }
         });
+
+        swMostrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(swMostrar.isChecked()){
+                    //.setInputType(InputType.TYPE_CLASS_TEXT);
+                    Contraseña.setInputType(InputType.TYPE_CLASS_TEXT);
+                }else{
+                    Contraseña.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                }
+            }
+        });
+
     }
 
     private void consultar() {
@@ -81,14 +100,17 @@ public class MainActivity extends AppCompatActivity {
             //verificar si los datos son iguales a la de la base de datos
             if(UsuarioC.equals(UsuarioBD) && ContraseñaC.equals(ContraseñaBD)){
                 Toast.makeText(getApplicationContext(), "Sesion Iniciado", Toast.LENGTH_LONG).show();
+
                 Intent button2 = new Intent(MainActivity.this, MenuS.class);
+                button2.putExtra("Usuario", UsuarioBD);
                 startActivity(button2);
+
             }else{
-                Toast.makeText(getApplicationContext(), "Usuario o Contraseña Incorrecto!!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Usuario o Contraseña Incorrecto!!", Toast.LENGTH_SHORT).show();
                 Toast.makeText(getApplicationContext(), "Usuario: "+ UsuarioBD + "Contraseña: " +ContraseñaBD, Toast.LENGTH_LONG).show();
             }
 
-
+            //Toast.makeText(getApplicationContext(), "Usuario: "+ UsuarioBD + "Contraseña: " +ContraseñaBD, Toast.LENGTH_LONG).show();
 
         } catch (Exception e) {
             Toast.makeText(getApplicationContext(), "Error de inicio de sesion (Error de BD)", Toast.LENGTH_LONG).show();

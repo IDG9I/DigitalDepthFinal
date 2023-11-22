@@ -1,5 +1,6 @@
 package com.example.digitaldepth;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.app.Activity;
@@ -23,21 +24,28 @@ public class Wifi extends AppCompatActivity {
 
     public String DNS = "8.8.8.8";
     Button btnMonitoriar;
+    Button btnSalir;
     EditText txtDNSs;
     TextView textDNS;
 
     Switch swDetener;
+
+    int DelayT = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wifi);
 
+
         txtPing = findViewById(R.id.txtPing);
         btnMonitoriar = (Button)findViewById(R.id.btnMonitoriar);
         txtDNSs = findViewById(R.id.txtDNSs);
         textDNS = findViewById(R.id.textDNS);
 
+        swDetener = findViewById(R.id.swDetener);
+
+        btnSalir = findViewById(R.id.btnSalir);
 
 
         btnMonitoriar.setOnClickListener(new View.OnClickListener() {
@@ -49,53 +57,74 @@ public class Wifi extends AppCompatActivity {
             }
         });
 
-        Runnable pingRunnable = new Runnable() {
+        swDetener.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                if(isActivityRunning){
-                    try {
-                        Process process = Runtime.getRuntime().exec("ping -c 1 "+DNS);
-                        BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-                        String line;
-                        String pingResult = "";
-                        while ((line = reader.readLine()) != null) {
-                            if (line.contains("time=")) {
-                                int startIndex = line.indexOf("time=") + 5;
-                                int endIndex = line.indexOf(" ms");
-                                if (startIndex >= 0 && endIndex >= 0) {
-                                    pingResult = line.substring(startIndex, endIndex);
-                                    break;
+            public void onClick(View v) {
+                if(swDetener.isChecked()){
+
+                    swDetener.setText("Iniciado");
+                    Runnable pingRunnable = new Runnable() {
+                        @Override
+                        public void run() {
+                            if(isActivityRunning){
+                                try {
+                                    Process process = Runtime.getRuntime().exec("ping -c 1 "+DNS);
+                                    BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+                                    String line;
+                                    String pingResult = "";
+                                    while ((line = reader.readLine()) != null) {
+                                        if (line.contains("time=")) {
+                                            int startIndex = line.indexOf("time=") + 5;
+                                            int endIndex = line.indexOf(" ms");
+                                            if (startIndex >= 0 && endIndex >= 0) {
+                                                pingResult = line.substring(startIndex, endIndex);
+                                                break;
+                                            }
+                                        }
+                                    }
+                                    int exitCode = process.waitFor();
+                                    if (!pingResult.isEmpty() && exitCode == 0) {
+                                        String finalPingResult = pingResult;
+                                        handler.post(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                txtPing.setText(finalPingResult);
+                                            }
+                                        });
+                                    } else {
+                                        handler.post(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                txtPing.setText("ERROR");
+                                            }
+                                        });
+                                    }
+                                } catch (Exception e) {
+                                    e.printStackTrace();
                                 }
                             }
+
+                            handler.postDelayed(this, DelayT); //segundos
                         }
-                        int exitCode = process.waitFor();
-                        if (!pingResult.isEmpty() && exitCode == 0) {
-                            String finalPingResult = pingResult;
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    txtPing.setText(finalPingResult);
-                                }
-                            });
-                        } else {
-                            handler.post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    txtPing.setText("ERROR");
-                                }
-                            });
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+                    };
+
+                    new Thread(pingRunnable).start();
+
+                }else{
+                    txtPing.setText("Detenido");
+                    swDetener.setText("Detenido");
+
                 }
-
-                handler.postDelayed(this, 1000); //segundos
             }
-        };
+        });
 
-        new Thread(pingRunnable).start();
-
+        btnSalir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent btnSalir = new Intent(Wifi.this, MenuS.class);
+                startActivity(btnSalir);
+            }
+        });
     }
 
     private boolean isActivityRunning = true;

@@ -15,6 +15,7 @@ public class MenuS extends AppCompatActivity {
     Button btnInfo;
     Button btnSensor;
     Button btnWifi;
+    Button btnSettings;
 
     ImageView imgAnalizar;
 
@@ -28,6 +29,11 @@ public class MenuS extends AppCompatActivity {
         btnSensor = (Button)findViewById(R.id.btnSensor);
         btnWifi = (Button)findViewById(R.id.btnWifi);
         imgAnalizar = findViewById(R.id.imgAnalizar);
+        btnSettings = findViewById(R.id.btnSettings);
+
+        Intent intent = getIntent();
+
+        String DatoUsuario = intent.getStringExtra("Usuario");
 
         imgAnalizar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +72,15 @@ public class MenuS extends AppCompatActivity {
             public void onClick(View view) {
                 Intent btvolver = new Intent(MenuS.this, MainActivity.class);
                 startActivity(btvolver);
+            }
+        });
+
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent btnSettings = new Intent(MenuS.this, Configuracion.class);
+                btnSettings.putExtra("NombreUsuario", DatoUsuario);
+                startActivity(btnSettings);
             }
         });
     }
