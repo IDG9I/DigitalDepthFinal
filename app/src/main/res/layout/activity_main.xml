@@ -7,6 +7,21 @@
     tools:context=".MainActivity"
     android:background="#6A5ABE">
 
+    <TextView
+        android:id="@+id/txtOlvidaste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="192dp"
+        android:text="Olvidaste tu contraseña?"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIniciarS" />
+
     <EditText
         android:id="@+id/txtUsuario"
         android:layout_width="wrap_content"
@@ -23,26 +38,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="129dp"
-        android:layout_marginBottom="248dp"
-        android:text="Olvidaste tu contraseña?"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIniciarS" />
-
     <Switch
         android:id="@+id/swMostrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="7dp"
         android:layout_marginTop="307dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="397dp"
@@ -88,12 +88,22 @@
         android:id="@+id/btnIniciarS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="139dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="139dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="72dp"
         android:text="Iniciar sesion"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtContraseña" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="57dp"
+        android:text="Registrarse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnIniciarS"
         app:layout_constraintTop_toBottomOf="@+id/txtContraseña" />
 
 
