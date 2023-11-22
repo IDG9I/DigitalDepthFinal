@@ -32,10 +32,10 @@
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/TextoProseso" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/TextoProseso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -70,7 +70,7 @@
         tools:layout_editor_absoluteY="0dp">
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/txtPorcentaje"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginStart="167dp"
@@ -78,7 +78,7 @@
             android:layout_marginEnd="168dp"
             android:layout_marginBottom="458dp"
             android:fontFamily="sans-serif-black"
-            android:text="20%"
+            android:text="0%"
             android:textColor="@color/white"
             android:textSize="40dp"
             app:layout_constraintBottom_toBottomOf="parent"

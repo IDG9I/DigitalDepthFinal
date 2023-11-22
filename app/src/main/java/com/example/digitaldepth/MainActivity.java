@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
             }else{
                 Toast.makeText(getApplicationContext(), "Usuario o Contraseña Incorrecto!!", Toast.LENGTH_SHORT).show();
-                Toast.makeText(getApplicationContext(), "Usuario: "+ UsuarioBD + "Contraseña: " +ContraseñaBD, Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Usuario: "+ UsuarioBD + " / Contraseña: " +ContraseñaBD, Toast.LENGTH_LONG).show();
             }
 
             //Toast.makeText(getApplicationContext(), "Usuario: "+ UsuarioBD + "Contraseña: " +ContraseñaBD, Toast.LENGTH_LONG).show();
